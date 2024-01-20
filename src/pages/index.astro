@@ -1,0 +1,102 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+---
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+<DefaultLayout title="C. CATHEBRAS">
+  <Hero />
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Compétences</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:language-python" title="Python 3">
+          ‎ 
+        </Feature>
+        <Feature icon="mdi:language-go" title="GoLang">
+          ‎ 
+        </Feature>
+        <Feature icon="mdi:bash" title="Bash">
+          ‎ 
+        </Feature>
+        <Feature icon="mdi:linux" title="Plateformes">
+          Linux & Windows
+        </Feature>
+        <Feature icon="mdi:cog" title="CI-CD">
+          Jenkins, Git
+        </Feature>
+        <Feature icon="mdi:infinity" title="DevOps">
+          Ansible, Docker, Grafana
+        </Feature>
+        <Feature icon="mdi:dev-to" title="Autres">
+          TCL, SQL, API REST, Selenium
+        </Feature>
+        <Feature icon="mdi:file-certificate-outline" title="Soft skills">
+          Management d'équipe, gestion de projets, développement Agile
+        </Feature>
+        <Feature icon="mdi:robot-industrial" title="Secteurs connus">
+          Spatial, nucléaire, industrie, IoT
+        </Feature>
+      </div>
+    </div>
+  </section>
+  <section class="my-64 mb-32">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Projets personnels</h2>
+        <ContentMedia imgSrc="/pal.png">
+          <h2>PAL Back-end</h2>
+          <p class="text-2xl">
+            Développement du back-end du <a href="https://github.com/EnoLaf/pal">projet PAL</a>. Création de l'API REST, scrapping web,
+            gestion de bases de données, authentification des utilisateurs.</br></br>
+            <iconify-icon icon="mdi:language-python" style="font-size: 40px" placeholder="Python"></iconify-icon>
+            <iconify-icon icon="mdi:server" style="font-size: 40px"></iconify-icon>
+            <iconify-icon icon="mdi:database" style="font-size: 40px"></iconify-icon> 
+            <iconify-icon icon="mdi:api" style="font-size: 40px"></iconify-icon>
+            <a href="#"><iconify-icon icon="mdi:github" style="font-size: 40px"></iconify-icon></a>
+          </p>
+        </ContentMedia>
+        <ContentMedia imgSrc="/wow.png" reverseImg={true}>
+          <h2>WoW Scanner V2</h2>
+          <p class="text-2xl">
+            Création d'un utilitaire personnel hébergé sur Raspberry Pi.
+            Utilisé pour récupérer régulièrement le prix des objets en
+            vente à l'hôtel de ventes des serveurs français. </br>
+            Récupération des données via l'API officielle Blizzard.
+            Stockage sur base de données, et affichage sur une interface web.
+          </br></br>
+
+          <iconify-icon icon="mdi:language-python" style="font-size: 40px" placeholder="Python"></iconify-icon>
+          <iconify-icon icon="mdi:database" style="font-size: 40px"></iconify-icon> 
+          <iconify-icon icon="mdi:api" style="font-size: 40px"></iconify-icon>
+          <a href="https://github.com/CCatheb/wow-Scanner2"><iconify-icon icon="mdi:github" style="font-size: 40px"></iconify-icon></a>
+          </p>
+      </ContentMedia>
+      <ContentMedia imgSrc="/steam-logo.png">
+        <h2>ChooseMeAGame</h2>
+        <p class="text-2xl">
+          Développement d'une version "Gaming" de PAL.</br>
+          Tirage au sort automatique d'un jeu dans la bibliothèque Steam de l'utilisateur,
+          selon ses critère définis (type de jeu, multijoueur, temps de jeu, etc)
+        </br></br>
+        <iconify-icon icon="mdi:language-python" style="font-size: 40px" placeholder="Python"></iconify-icon>
+        <iconify-icon icon="mdi:api" style="font-size: 40px"></iconify-icon>
+        </p>
+      </ContentMedia>
+    </div>
+  </section>
+  <!-- <section class="mt-64 mb-32">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Counters</h2>
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+        <Counter count="130" title="Stars" sub="On GitHub" />
+        <Counter count="17" title="Accessible" sub="Components" />
+        <Counter count="500" title="Commits" sub="Merged" />
+        <Counter count="18+" title="Months" sub="Since launch" />
+      </div>
+    </div>
+  </section> -->
+</DefaultLayout>
